@@ -1,0 +1,128 @@
+.App {
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  /* About Section */
+  .first-section {
+    height: 100vh;
+    margin-bottom: 800px;
+  }
+  .social {
+    top: 600px;
+    bottom: 600px;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    animation: none;
+    padding-left: 40px;
+  }
+  .about-me {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+
+  .text-1 {
+    flex-wrap: wrap;
+    max-width: 100vw;
+    padding: 3%;
+  }
+  /* Experience Section */
+  .third-section {
+    margin-top: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 700px;
+  }
+  .ninth-app {
+    display: none;
+  }
+  .title-1 {
+    font-size: 1.8em;
+  }
+  .apps {
+    flex-direction: column;
+    max-width: 100vw;
+    max-height: 100%;
+    padding-bottom: 200px;
+  }
+  .forth-section {
+    padding-left: 50px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .first-section {
+    height: 100vh;
+    margin-bottom: 800px;
+  }
+  .about {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    animation: none;
+  }
+  .about-me {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+
+  .text-1 {
+    flex-wrap: wrap;
+    max-width: 100vw;
+    padding: 1%;
+  }
+  .third-section {
+    margin-top: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 700px;
+  }
+  /* Experience Section */
+  .third-section {
+    margin-top: 200px;
+  }
+  .title-1 {
+    font-size: 1.8em;
+  }
+  .apps {
+    max-width: 100vw;
+    max-height: 100%;
+    padding-bottom: 200px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .about {
+    flex-direction: row;
+  }
+  .about-me {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+
+  .text-1 {
+    flex-wrap: wrap;
+    max-width: 100vw;
+  }
+  /* Experience Section */
+  .third-section {
+    margin-top: 200px;
+  }
+  .title-1 {
+    font-size: 1.8em;
+  }
+  .apps {
+    max-width: 100vw;
+    max-height: 100%;
+    padding-bottom: 200px;
+  }
+}
