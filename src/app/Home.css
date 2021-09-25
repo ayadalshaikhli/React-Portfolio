@@ -13,11 +13,15 @@ body {
   flex-direction: column;
   font-family: var(--font-secound);
   font-size: 2em;
-  height: 350vw;
+  height: auto;
+}
+
+a {
+  color: white;
 }
 .first-section {
   width: 100%;
-  height: 100vh;
+  /* height: 99vh; */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -102,6 +106,7 @@ img {
 
 .block-list {
   white-space: nowrap;
+  overflow-y: hidden;
 }
 
 .block-list__item {
@@ -176,197 +181,194 @@ img {
   padding-right: 200px;
 }
 
-
 /*  ===================
     ===== Third-Section
     =================== */
-    .third-section {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-      
-      .apps {
-        position: absolute;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-        text-align: center;
-        max-width: 100vw;
-      }
-      
-      .apps .app-logo {
-        max-width: 100px;
-        max-height: 10%;
-        margin: 0 auto;
-      }
-      
-      .apps h2 {
-        color: #777777;
-      }
-      
-      /*  ===================
+.third-section {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.apps {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  max-width: 100vw;
+}
+
+.apps .app-logo {
+  max-width: 100px;
+  max-height: 10%;
+  margin: 0 auto;
+}
+
+.apps h2 {
+  color: #777777;
+}
+
+/*  ===================
           ===== Forth-Section
           =================== */
-      .forth-section {
-        height: 100vh;
-        width: 100%;
-      }
-      
-      .card {
-        position: relative;
-        display: flex;
-      }
-      
-      .card-box {
-        opacity: 0;
-        position: relative;
-        flex-direction: column;
-        align-items: flex-start;
-        font-family: (var(--font-main));
-        text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-top: -600px;
-        padding-top: 200px;
-        background-color: #00000088;
-        color: black;
-        width: 100%;
-        height: 100%;
-      
-        /* border-radius: 0px 50px 50px 0px; */
-      }
-      
-      .card-box:hover {
-        opacity: 1;
-        color: white;
-      }
-      
-      a {
-        text-decoration: none;
-      }
-      @media (max-width: 576px) {
-        /* About Section */
-        .first-section {
-          height: 100vh;
-          margin-bottom: 800px;
-        }
-        .social {
-          top: 600px;
-          bottom: 600px;
-        }
-      
-        .about {
-          flex-direction: column;
-          padding: 0;
-          margin: 0;
-          animation: none;
-          padding-left: 40px;
-        }
-        .about-me {
-          flex-direction: row;
-          flex-wrap: wrap;
-          height: 100vh;
-        }
-      
-        .text-1 {
-          flex-wrap: wrap;
-          max-width: 100vw;
-          padding: 3%;
-        }
-        /* Experience Section */
-        .third-section {
-          margin-top: 200px;
-          padding-left: 50px;
-          padding-right: 50px;
-          margin-bottom: 700px;
-        }
-        .ninth-app {
-          display: none;
-        }
-        .title-1 {
-          font-size: 1.8em;
-        }
-        .apps {
-          flex-direction: column;
-          max-width: 100vw;
-          max-height: 100%;
-          padding-bottom: 200px;
-        }
-        .forth-section {
-          padding-left: 50px;
-        }
-      }
-      
-      /* // Medium devices (tablets, 768px and up) */
-      @media (min-width: 768px) {
-        .first-section {
-          height: 100vh;
-          margin-bottom: 800px;
-        }
-        .about {
-          flex-direction: column;
-          padding: 0;
-          margin: 0;
-          animation: none;
-        }
-        .about-me {
-          flex-direction: row;
-          flex-wrap: wrap;
-          height: 100vh;
-        }
-      
-        .text-1 {
-          flex-wrap: wrap;
-          max-width: 100vw;
-          padding: 1%;
-        }
-        .third-section {
-          margin-top: 200px;
-          padding-left: 50px;
-          padding-right: 50px;
-          margin-bottom: 700px;
-        }
-        /* Experience Section */
-        .third-section {
-          margin-top: 200px;
-        }
-        .title-1 {
-          font-size: 1.8em;
-        }
-        .apps {
-          max-width: 100vw;
-          max-height: 100%;
-          padding-bottom: 200px;
-        }
-      }
-      
-      /* // Large devices (desktops, 992px and up) */
-      @media (min-width: 992px) {
-        .about {
-          flex-direction: row;
-        }
-        .about-me {
-          flex-direction: column;
-          flex-wrap: wrap;
-          height: 100vh;
-        }
-      
-        .text-1 {
-          flex-wrap: wrap;
-          max-width: 100vw;
-        }
-        /* Experience Section */
-        .third-section {
-          margin-top: 200px;
-        }
-        .title-1 {
-          font-size: 1.8em;
-        }
-        .apps {
-          max-width: 100vw;
-          max-height: 100%;
-          padding-bottom: 200px;
-        }
-      }
+.forth-section {
+  height: 100vh;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  display: flex;
+}
+
+.card-box {
+  opacity: 0;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: (var(--font-main));
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: -600px;
+  padding-top: 200px;
+  background-color: #00000088;
+  color: black;
+  width: 100%;
+  height: 100%;
+
+  /* border-radius: 0px 50px 50px 0px; */
+}
+
+.card-box:hover {
+  opacity: 1;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+@media (max-width: 576px) {
+  /* About Section */
+  .first-section {
+    height: 100vh;
+  }
+  .social {
+    top: 600px;
+    bottom: 600px;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    animation: none;
+    padding-left: 40px;
+  }
+  .about-me {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+
+  .text-1 {
+    flex-wrap: wrap;
+    max-width: 100vw;
+    padding: 3%;
+  }
+  /* Experience Section */
+  .third-section {
+    margin-top: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 700px;
+  }
+  .ninth-app {
+    display: none;
+  }
+  .title-1 {
+    font-size: 1.8em;
+  }
+  .apps {
+    flex-direction: column;
+    max-width: 100vw;
+    max-height: 100%;
+    padding-bottom: 200px;
+  }
+  .forth-section {
+    padding-left: 50px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .first-section {
+    height: 100vh;
+  }
+  .about {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    animation: none;
+  }
+  .about-me {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+
+  .text-1 {
+    flex-wrap: wrap;
+    max-width: 100vw;
+    padding: 1%;
+  }
+  .third-section {
+    margin-top: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 700px;
+  }
+  /* Experience Section */
+  .third-section {
+    margin-top: 200px;
+  }
+  .title-1 {
+    font-size: 1.8em;
+  }
+  .apps {
+    max-width: 100vw;
+    max-height: 100%;
+    padding-bottom: 200px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .about {
+    flex-direction: row;
+  }
+  .about-me {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+
+  .text-1 {
+    flex-wrap: wrap;
+    max-width: 100vw;
+  }
+  /* Experience Section */
+  .third-section {
+    margin-top: 200px;
+  }
+  .title-1 {
+    font-size: 1.8em;
+  }
+  .apps {
+    max-width: 100vw;
+    max-height: 100%;
+    padding-bottom: 200px;
+  }
+}
