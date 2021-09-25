@@ -108,6 +108,9 @@ img {
   white-space: nowrap;
   overflow-y: hidden;
 }
+.block-list ::-webkit-scrollbar {
+  display: none;
+}
 
 .block-list__item {
   width: 450px;
