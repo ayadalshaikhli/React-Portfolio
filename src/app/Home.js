@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from "react";
 import "./Home.css";
 import IMAGES from "../Images/images";
 import gsap, { TweenMax, Expo } from "gsap";
+import Social from "./components/Social";
+import Work from "./components/Work";
 
 function Home() {
   let block1 = useRef(null);
@@ -13,6 +15,7 @@ function Home() {
   let thirdSection = useRef(null);
   let title = useRef(null);
   let apps = useRef(null);
+
   useEffect(() => {
     TweenMax.to(block1, 2, {
       x: "-280",
@@ -48,41 +51,33 @@ function Home() {
         toggleActions: "restart resume resume  resume",
       },
       opacity: 0,
-      delay: 1,
+      delay: 0,
       duration: 3,
     });
-    gsap.from(thirdSection, {
-      scrollTrigger: {
-        trigger: ".third-section",
-        toggleActions: "restart resume resume resume ",
-      },
-      opacity: 0,
-      delay: 1,
-      ease: Expo.easeInOut,
-      duration: 1,
-    });
-    gsap.from(title, {
-      scrollTrigger: {
-        trigger: ".third-section",
-        toggleActions: "restart resume resume resume ",
-      },
-      y: -200,
-      delay: 2,
-      duration: 2,
-    });
-    gsap.from(apps, {
-      scrollTrigger: {
-        trigger: ".third-section",
-        toggleActions: "restart resume resume resume ",
-      },
-      y: 400,
-      delay: 2,
-      duration: 2,
-    });
+    // gsap.from(thirdSection, {
+    //   scrollTrigger: {
+    //     trigger: ".third-section",
+    //     toggleActions: "restart resume resume resume ",
+    //   },
+    //   opacity: 0,
+    //   delay: 1,
+    //   ease: Expo.easeInOut,
+    //   duration: 1,
+    // });
+    // gsap.from(title, {
+    //   scrollTrigger: {
+    //     trigger: ".third-section",
+    //     toggleActions: "restart resume resume resume ",
+    //   },
+    //   y: -200,
+    //   delay: 1,
+    //   duration: 2,
+    // });
   });
 
   return (
     <div>
+      <Social />
       <section class="first-section">
         {/* <div class="social">
           <a href="#contact">
@@ -295,90 +290,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <div class="scroll-content">
-        <div class="section section--vertical" id="second">
-          <h1 class="title-1">WORK</h1>
-          <div class="block-list">
-            <div class="block-list__item">
-              <div class="block-list__item-inner">
-                <a href="https://ayadalshaikhli.github.io/moviefinder/">
-                  <img src={IMAGES.moviefinderLogo} class="card img" alt="" />
-                  <div class="card-box">
-                    <h1>MovieFinder</h1>
-                    <p>JavaScript , HTML,CSS , jQuery</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="block-list__item">
-              <div class="block-list__item-inner">
-                <a href="https://delicat-bastille-97120.herokuapp.com/">
-                  <img src={IMAGES.DeliciosooLogo} class="card img" alt="" />
-                  <div class="card-box">
-                    <h1>Delicioso</h1>
-                    <p>JavaScript , HTML,CSS , jQuery</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="block-list__item">
-              <div class="block-list__item-inner">
-                <a href="https://ayadalshaikhli.github.io/weatherproject/">
-                  <img src={IMAGES.weatherproject} class="card img" alt="" />
-                  <div class="card-box">
-                    <h1>Weather Project</h1>
-                    <p>JavaScript , HTML,CSS , jQuery</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="block-list__item">
-              <div class="block-list__item-inner">
-                <a href="https://ayadalshaikhli.github.io/dayplanner/">
-                  <img src={IMAGES.dayplannerLogo} class="card img" alt="" />
-                  <div class="card-box">
-                    <h1>Day Planner</h1>
-                    <p>JavaScript , HTML,CSS , jQuery</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="block-list__item">
-              <div class="block-list__item-inner">
-                <a href="https://ayadalshaikhli.github.io/apiproject/">
-                  <img src={IMAGES.ballfinderLogo} class="card img" alt="" />
-                  <div class="card-box">
-                    <h1>Ball Finder</h1>
-                    <p>JavaScript , HTML,CSS , jQuery</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="block-list__item">
-              <div class="block-list__item-inner">
-                <a href="https://frozen-lowlands-84809.herokuapp.com/">
-                  <img src={IMAGES.techLogo} class="card img" alt="" />
-                  <div class="card-box">
-                    <h1>Tech Blog</h1>
-                    <p>JavaScript , HTML,CSS , jQuery</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="block-list__item">
-              <div class="block-list__item-inner">
-                <a href="https://ayadalshaikhli.github.io/ledyanailart/">
-                  <img src={IMAGES.Animation} class="card img" alt="=" />
-                  <div class="card-box">
-                    <h1>Ledya Nail Art</h1>
-                    <p>JavaScript , HTML,CSS , jQuery</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Work />
     </div>
   );
 }

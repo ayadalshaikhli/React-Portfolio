@@ -106,10 +106,17 @@ img {
 
 .block-list {
   white-space: nowrap;
+  padding-left: 50px;
   overflow-y: hidden;
 }
-.block-list ::-webkit-scrollbar {
-  display: none;
+.block-list::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+.block-list {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .block-list__item {
